@@ -1,0 +1,10 @@
+Author: <debacle@debian.org>
+Description: Adds the Python interpreter shebang line to modpython_frontend.py.
+
+--- a/trac/web/modpython_frontend.py
++++ b/trac/web/modpython_frontend.py
+@@ -1,3 +1,4 @@
++#!/usr/bin/env python
+ # -*- coding: utf-8 -*-
+ #
+ # Copyright (C) 2004-2009 Edgewall Software

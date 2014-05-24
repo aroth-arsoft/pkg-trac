@@ -1,0 +1,11 @@
+Debian packaging TODO for trac:
+-------------------------------
+
+ * package trac-migrate, remove sqlite2pg, recommend trac-migrate
+   instead. (see deprecation warning at
+   http://trac-hacks.org/wiki/SqliteToPgScript)
+
+ * review Suggests: and Recommends: for versioning/interoperability
+   with trac 1.0
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Thu, 28 Mar 2013 04:09:19 -0400

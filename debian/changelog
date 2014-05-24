@@ -1,0 +1,668 @@
+trac (1.0.1-2.1~aroth~ppa1) trusty; urgency=medium
+
+  * integrate patch to fix babel issues
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Sat, 24 May 2014 13:36:36 +0200
+
+trac (1.0.1-2) unstable; urgency=low
+
+  [ Daniel Kahn Gillmor ]
+  * upload to unstable
+  * clean up README.Debian
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Thu, 09 May 2013 17:05:50 -0400
+
+trac (1.0.1-1) experimental; urgency=low
+
+  [ Daniel Kahn Gillmor ]
+  * New Upstream Release (Closes: #690018)
+  * bumped debhelper to version 9
+  * added myself to Uploaders
+  * dropped 30_default_charset_utf8.patch, incorporated upstream.
+  * bumped Standard-Versions to 3.9.4 (no changes needed)
+  * switched Vcs-*: to collab-maint git
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>  Thu, 28 Mar 2013 04:56:50 -0400
+
+trac (0.12.5-1) experimental; urgency=low
+
+  [ W. Martin Borgert <debacle@debian.org> ]
+  * New upstream 0.12.5 (long term support).
+
+ -- W. Martin Borgert <debacle@debian.org>  Sun, 24 Feb 2013 19:03:11 +0000
+
+trac (0.12.4-1) experimental; urgency=low
+
+  [ W. Martin Borgert <debacle@debian.org> ]
+  * New upstream 0.12.4 (long term support).
+
+ -- W. Martin Borgert <debacle@debian.org>  Sun, 07 Oct 2012 12:05:25 +0000
+
+trac (0.12.3-1) unstable; urgency=low
+
+  * new upstream version (Closes: #658963)
+  * remove embedded jQuery copy, again (Closes: #645235)
+  * new policy version, no changes
+  * suggest python-psycopg2, add some hints about using Trac with
+    PostgreSQL in README.Debian
+  [ Daniel Kahn Gillmor <dkg@fifthhorseman.net> ]
+  * add Build-Dep on python-babel so that translations will be shipped
+    (Closes: #644401)
+
+ -- W. Martin Borgert <debacle@debian.org>  Thu, 31 May 2012 20:55:24 +0000
+
+trac (0.12.2-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release (Closes: #563391) (LP: #696284)
+    - fixes search highlighting (Closes: #621488)
+  * Drop 15_remove_jquery_file.dpatch because Trac requires a specific
+    version of jQuery (Closes: #592734, #610557) (LP: #526810, #610205).
+    (also drop postinst and prerm code for using the provided version)
+  * Drop 40_timeline_author_filter.dpatch: fixed upstream.
+  * Drop 60_fix_nameerror.dpatch: fixed upstream.
+  * Drop 70_cache_control_typo.dpatch: fixed upstream
+  * Drop 80_correct_plugin_names.dpatch: upstream changed mechanism which
+    probably also fixes the original issue.
+  * Switch to 3.0 (quilt) source format.
+  * Update Vcs-Browser field (Closes: #629651).
+  * Moved packaging from python-central to dh_python2 (Closes: #617126).
+  * Dropped conflicts on libapache2-mod-python2.3 because that package was
+    removed before the lenny release.
+  * Switch to dh-style debian/rules.
+  * Bump standards-version to 3.9.2; no changes required.
+  * No longer include empty /etc/trac directory.
+  * Re-organise dependencies, removing deprecated things and adding things
+    for Trac 0.12.
+  * Make package lintian clean.
+  * Update debian/copyright file.
+
+ -- Arthur de Jong <adejong@debian.org>  Wed, 13 Jul 2011 23:00:00 +0200
+
+trac (0.11.7-4) unstable; urgency=low
+
+  * No longer reference site-packages (Closes: #588136, #591593).
+    Thanks to Ara Pulido <ara@ubuntu.com> for reporting and patch.
+  * Use changeset 9403, missing imports (Closes: #583154).
+    Thanks to Anatoly <techtonik@php.net>.
+  * Lintian cleanups in debian/control.
+  * New policy version, no changes.
+
+ -- W. Martin Borgert <debacle@debian.org>  Wed, 04 Aug 2010 20:26:31 +0000
+
+trac (0.11.7-3) unstable; urgency=low
+
+  * Correced accidently moved DEBHELPER line (Closes: #576988).
+    Thanks to Marc J. Driftmeyer <mjd@reanimality.com>.
+
+ -- W. Martin Borgert <debacle@debian.org>  Thu, 08 Apr 2010 19:56:26 +0000
+
+trac (0.11.7-2) unstable; urgency=low
+
+  * Removed Luis and Jesus from uploaders. Thanks for your work!
+  * Create symlink for jquery.js (Closes: #495053). Thanks to
+    Max V. Stotsky" <ms@pereslavl.ru>.
+
+ -- W. Martin Borgert <debacle@debian.org>  Thu, 08 Apr 2010 08:25:08 +0000
+
+trac (0.11.7-1) unstable; urgency=low
+
+  * New upstream release (Closes: #573260).
+  * Added more Trac plugins as suggestions.
+  * Removed obsolete patches.
+
+ -- W. Martin Borgert <debacle@debian.org>  Wed, 17 Feb 2010 08:38:41 +0100
+
+trac (0.11.6-3) unstable; urgency=low
+
+  [ Jakub Wilk ]
+  * Replace deprecated > operator with >=.
+  [ W. Martin Borgert ]
+  * Fix problem with wrong plugin names (Closes: #562963). Thanks to
+    Anatoly Techtonik <techtonik@gmail.com> for providing the patch.
+  * Added some Trac plugins as suggestions.
+
+ -- W. Martin Borgert <debacle@debian.org>  Sun, 07 Feb 2010 13:06:32 +0000
+
+trac (0.11.6-2) unstable; urgency=low
+
+  * Create jQuery symlink at install time, as the file might not
+    exist at that moment. (Closes: #562145). Thanks, Clint Adams.
+  * Fix a typo in tracd HTTP header, thanks to Sebastien Couret
+    for fixing. (Closes: #561406).
+
+ -- W. Martin Borgert <debacle@debian.org>  Thu, 24 Dec 2009 08:43:08 +0000
+
+trac (0.11.6-1) unstable; urgency=low
+
+  * New upstream release (Closes: #558976).
+  * Fix version of build dependency (Closes: #551688), thanks, Kumar Appaiah.
+  * Fix a potential pysqlite cursor problem, thanks, Grzegorz Sobanski.
+    See debian/patches/60_roadmap_dbx_cursor_fix.dpatch
+
+ -- W. Martin Borgert <debacle@debian.org>  Mon, 07 Dec 2009 17:19:33 +0000
+
+trac (0.11.5-5) unstable; urgency=low
+
+  * Include SqliteToPg script in contrib (Closes: #505680).
+  * Advice user to restart HTTPD after upgrade in README.Debian
+    (Closes: #519670).
+  * Add patch to support user filter for timeline (Closes: #550469).
+
+ -- W. Martin Borgert <debacle@debian.org>  Sat, 10 Oct 2009 12:00:50 +0000
+
+trac (0.11.5-4) unstable; urgency=low
+
+  * Revert the change: Depend on python-setuptools instead of
+    python-pkg-resources (Closes: #546426). In theory setuptools
+    should not be needed (only used in env.py and requires.txt).
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 29 Sep 2009 01:34:38 +0200
+
+trac (0.11.5-3) unstable; urgency=low
+
+  [ W. Martin Borgert ]
+  * Improved package description.
+  * Fixed another lintian.
+  * Use python.mk and its macros py_setup_install_args and py_libdir_sh
+    for Python 2.6, thanks to Chris Coulson <chrisccoulson@ubuntu.com>
+    for the patch (Closes: #547865).
+  * Relax dependencies on JQuery and Subversion (Closes: #547450).
+  * Depend on python-pkg-resources instead of python-setuptools
+    (Closes: #546426).
+  * Add suggestions for trac-accountmanager and trac-email2trac.
+  * Add some words about sqlite upgrade to README.Debian
+    (Closes: #501338).
+  * Use UTF-8 as default charset instead of ISO-8859-15.
+
+  [ anatoly techtonik ]
+  * README.Debian update for 0.11.x
+    - Trac can work without repository
+    - warn that CGI setup is sluggish
+    - other minor edits
+
+ -- W. Martin Borgert <debacle@debian.org>  Mon, 28 Sep 2009 20:27:54 +0000
+
+trac (0.11.5-2) unstable; urgency=low
+
+  * Set exec bit for *_frontends (Closes: #510441), thanks to Torsten
+    Landschoff for the patch.
+  * Move python-psycopg2 and python-mysql from Suggests to Depends as
+    alternative to python-psqlite2 (Closes: #513117).
+  * Use debhelper 7 (Closes: #497862).
+  * Don't compress *-hook files and don't install MS-Windows *.cmd
+    files (Closes: #526142), thanks to Jan Dittberner for the patch.
+  * Add README.source to point to dpatch.
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 15 Sep 2009 21:43:38 +0000
+
+trac (0.11.5-1) unstable; urgency=low
+
+  * New upstream release (Closes: #521513).
+  * Fixed pysqlite dependency (Closes: #518560), thanks to Alban
+    Browaeys for the patch.
+  * Fixed missing contrib files (Closes: #495019), thanks to Alexander
+    Gerasiov for the patch.
+  * Maintenance goes to python apps team. The pre-history is here:
+    VCS-Git: git://git.debian.org/git/pkg-trac/trac.git
+    VCS-Browser: http://git.debian.org/?p=pkg-trac/trac.git
+  * Removed patches/10_remove_trac_suffix_from_title - it seems that
+    the string "Trac" only is used now when no project name is set.
+  * Removed patches/17_SA32652.dpatch - this fix was already a back
+    port of an upstream change.
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 15 Sep 2009 00:11:31 +0000
+
+trac (0.11.1-2.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * Fix Trac Multiple Vulnerabilities (SA32652) (Closes: #505197)
+
+ -- Giuseppe Iuculano <giuseppe@iuculano.it>  Sun, 16 Nov 2008 18:34:25 +0100
+
+trac (0.11.1-2) unstable; urgency=low
+
+  * Upstream version
+    "Trac 0.11.1 contains a number of bug fixes and minor enhancements."
+  * Patch setup.py to install the contrib dir ( Closes: #495019 )
+  * Modified compatible version of trac-bzr so that trac 0.11.1 an be
+    used with the current trac-bzr version.
+
+ -- Luis Matos <gass@otiliamatos.ath.cx>  Sat, 16 Aug 2008 00:08:30 +0100
+
+trac (0.11.1-1) experimental; urgency=low
+
+  * New upstream version
+  * Added dh_link to debian/rules Closes: #494003.
+  * Adding $(PYVER) in rules also Closes: #493079.
+  * Trac 0.11 also seems to close old bugs.
+    ( Closes: #436293, #400774, #435321 ).
+
+ -- Luis Matos <gass@otiliamatos.ath.cx>  Thu, 07 Aug 2008 02:06:25 +0100
+
+trac (0.11+svn7384-1) experimental; urgency=low
+
+  * updated SOURCES.txt for the svn revision version
+  * Updated patch 15_remove_jquery_file for jquery 1.2.6
+  * Updated source to revision 7384
+  * Added a version dependency on trac-bzr because 0.2 is not trac 0.11
+    compatible.
+  * Changed debian/control because trac supports both mod-python and
+    mod-wsgi.
+  * Dropped hardcoded python version. This will please bzed!
+  * Added lintian overrides because of deploy handling the interpreter's path
+
+ -- Luis Matos <gass@otiliamatos.ath.cx>  Thu, 24 Jul 2008 01:22:53 +0100
+
+trac (0.11-3) unstable; urgency=low
+
+  * Updated Readme.Debian - Thanks to W. Martin Borgert. Closes: #490926
+  * added the coderanger's website as trac info source
+  * Removed php-cli and clearsilver from suggests
+  * Upstream prefers psycopg2 for postgresql backend
+  * Removed the jquery.js file, added a dependency for jquery
+  * Updated the watch file since now trac packages start with a T
+  * Added Homepage field in debian/control
+  * Added a suggests on libapache2-mod-wsgi
+  * Added me as Uploader so lintian won't complain about NMU's
+
+ -- Luis Matos <gass@otiliamatos.ath.cx>  Mon, 21 Jul 2008 21:23:12 +0100
+
+trac (0.11-2) unstable; urgency=low
+
+  * Re-added python-setup-tools to build dependences. Closes: #490320 #468705
+  * New upstream release Closes: 489727
+  * Added sugestion for other vcs support available: git bazaar mercurial
+  * Added spamfilter plugin to sugests
+  * Moved packaging from python-support to python-central
+  * Added an entry to the NEWS about the cgi Closes: #490275
+  * Updated 10_remove_trac_suffix_from_title patch to be used in 0.11
+
+ -- Luis Matos <gass@otiliamatos.ath.cx>  Sun, 13 Jul 2008 23:46:20 +0100
+
+trac (0.11-1) unstable; urgency=low
+
+  [ Luis Matos ]
+  * New Upstream release Closes: #463201
+  * Does not work with PostgreSQL 8.3 - column type conflict (Closes: #464168)
+  * s/python-setuptools/python-pkg-resources/ dependency (Closes: #468705)
+  * Updated Depends and Recommends to follow bug report. Closes: #487150
+
+ -- Otavio Salvador <otavio@debian.org>  Tue, 08 Jul 2008 20:17:04 -0300
+
+trac (0.11~rc1-1) experimental; urgency=low
+
+  * New upstream release
+  * Bump standards-version to 3.7.3; no changes required
+  * Fix typos and break a long line on extended descriptions
+  * Drop binary-post-install rule since it's not required anymore
+  * Add a build-depends on python-setuptools
+  * Add patch to remove ' - Trac' from title. Thanks Sam Hocevar
+    <sam@zoy.org>. Closes: #482181
+  * Drop 01_use_global_config.dpatch since Trac now offers a better and
+    more flexible way to handle it
+  * Add a NEWS note about the change regarting system-wide trac.ini
+    handling
+
+ -- Otavio Salvador <otavio@debian.org>  Sat, 07 Jun 2008 19:17:43 -0300
+
+trac (0.10.4-2) unstable; urgency=low
+
+  [ Otavio Salvador ]
+  * Remove trac/siteconfig.py on package clean up
+  * debian/control: Add XS-VCS-{Git,Browser} fields.
+  * Change maintainer to Debian Trac Team and move Jesus to uploaders
+    field.
+
+  [ Luis Matos ]
+  * Add php5-cli to Suggests field (Closes: #407118)
+  * changed README.Debian. (Closes: #405903)
+  * Trac shouls at least suggest postgresql-client or mysql-client
+    (Closes: #393933)
+  * Moved python-psycopg2 from depends to suggests
+  * workaround for instance.__dict__ not accessible in restricted mode
+    (Closes: #389826)
+
+ -- Otavio Salvador <otavio@debian.org>  Mon, 04 Jun 2007 17:39:51 -0300
+
+trac (0.10.4-1) unstable; urgency=low
+
+  * New upstream release (Closes: #414134, #420219)
+  * Fixed typo in debian/copyright file (Closes: #422409)
+
+ --  Luis Matos <gass@otiliamatos.ath.cx>  Sun, 20 May 2007 22:46:56 +0100
+
+trac (0.10.3-1) unstable; urgency=low
+
+  * New upstream upload. Final 0.10.3 release that will hopefully make it into
+    Debian 4.0 etch.
+  * Add a NEWS entry for trac.ini being moved to /etc/trac/trac.ini
+    (Closes: #402937)
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Wed, 13 Dec 2006 23:18:45 +0200
+
+trac (0.10.3~rc1-1) unstable; urgency=low
+
+  * This is the "Luis Matos" release. Without his help and dedication we would
+    have never had it. Thanks.
+  * New upstream release candidate.
+  * Change the global path for the config file from /usr/share to /etc/trac
+    (Closes: #393226, #337243, #386415, #400826)
+  * The "NoSuchChangeset" problem is solved in this release (Closes: #400489)
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Tue, 12 Dec 2006 00:20:33 +0200
+
+trac (0.10.2-1) unstable; urgency=high
+
+  * New upstream release, fixing 3 RC bugs introduced at 0.10.1, which were
+    not triggered in normal conditions.
+    - Fixes deadlock when using authz_file config option
+    - Makes the CSRF code play nice with the XmlRpcPlugin
+    - Fixes Timeline breakage after svn commit when using sqlite
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Mon, 13 Nov 2006 22:46:59 +0200
+
+trac (0.10.1.svn4235-1) unstable; urgency=high
+
+  * Subversion stable checkout to get a fix for Timeline and Browse Source.
+  * Urgency high because this is an RC candidate.
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Fri, 11 Nov 2006 14:25:36 +0200
+
+trac (0.10.1-1) unstable; urgency=high
+
+  * New Upstream Release (Closes: #397683)
+  * Depend on python-psycopg2 (Closes: #397725)
+  * Security fix, hence urgency=high. No DSA or CVS available yet.
+  * Upstream changes (most important ones):
+    - fixed CSRF vulnerability
+    - better database handling
+    - only TICKET_ADMIN can assign a passed milestone to a ticket
+    - failed to upload attachments
+    - more (comprehensive list can be found at
+      http://trac.edgewall.org/query?status=closed&milestone=0.10.1)
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Thu,  9 Nov 2006 11:53:53 +0200
+
+trac (0.10-3) unstable; urgency=low
+
+  * debian/control: changed the Conflicts: entry with a versioned oned
+    (Closes: #393842, #384381)
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Wed, 18 Oct 2006 11:47:41 +0300
+
+trac (0.10-2) unstable; urgency=medium
+
+  * debian/control: Added a Conflicts: against libapache2-mod-python2.3 to
+    avoid breakage if using it through apache2 (Closes: #384381).
+  * Urgency = high to get it back in etch.
+  * Added missing changelog entries from Andres Salomon.
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Mon, 16 Oct 2006 21:58:29 +0300
+
+trac (0.10-1) unstable; urgency=low
+
+  * New upstream release
+  * Add a watch file
+  * Add a NEWS entry to remember user that he needs to handle the upgrade
+    byhand
+
+ -- Otavio Salvador <otavio@debian.org>  Thu,  5 Oct 2006 13:51:10 -0300
+
+trac (0.10~b1-1) experimental; urgency=low
+
+  * New upstream release, finally.
+  * Incorporate new python policy magic (closes: #384969).
+
+ -- Andres Salomon <dilinger@debian.org>  Wed, 30 Aug 2006 01:36:55 +0000
+
+trac (0.9.99+0.10svn20060710-1) experimental; urgency=low
+
+  * New snapshot of 0.10dev (revision 3519).  Note that this includes
+    the security update that was in the 0.9.6 release.
+
+ -- Andres Salomon <dilinger@debian.org>  Mon, 10 Jul 2006 15:36:51 -0400
+
+trac (0.9.99+0.10svn20060626-1) experimental; urgency=low
+
+  * New snapshot of 0.10dev (revision 3488).
+
+ -- Andres Salomon <dilinger@debian.org>  Mon, 26 Jun 2006 17:33:41 -0400
+
+trac (0.9.99+0.10svn20060610-1) experimental; urgency=low
+
+  * New upstream release; stick a snapshot of 0.10dev (revision 3390) into
+    experimental (closes: #370657).
+
+ -- Andres Salomon <dilinger@debian.org>  Sat, 10 Jun 2006 18:29:25 -0400
+
+trac (0.9.6-3) unstable; urgency=low
+
+  * Make the python-support build-dep-indep a normal build-depends, and
+    drop the python dep (python-support pulls in python).
+  * Reset permissions on wikitoolbar.js during build.
+  * Drop old usr/lib/python2.3/site-packages/trac/ path from package, which
+    cdbs seemed to be picking up for some reason (closes: #385166).
+
+ -- Andres Salomon <dilinger@debian.org>  Wed, 30 Aug 2006 01:53:25 +0000
+
+trac (0.9.6-2) unstable; urgency=low
+
+  * Upgraded to the new Python policy (Closes: #380977)
+  * Standards updated to 3.7.2, no changes needed.
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Thu, 10 Aug 2006 21:41:04 +0300
+
+trac (0.9.6-1) unstable; urgency=high
+
+  * New upstream release.
+  * Security upload, hence urgency set to high.
+    - Fixed reStructuredText breach of privacy and denial of service
+      vulnerability found by Felix Wiemann.
+    - trac-post-commit-hook fix.
+  * Added -f to rm to enforce removal of file, even if it does not exist.
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Thu,  6 Jul 2006 23:28:04 +0300
+
+trac (0.9.5-2) unstable; urgency=low
+
+  * Add myself to uploaders.
+  * Ack NMU; thanks Lars!
+  * Drop debian-specific manpages; upstream already includes them.  Allow
+    debhelper to create manpage directory, as well.
+  * Change the path for test.py in debian/rules to match regardless of
+    the python version.
+  * Fix grammar errors in README.Debian; thanks to Micah Anderson for the
+    patch (closes: #372188).
+
+ -- Andres Salomon <dilinger@debian.org>  Sat, 10 Jun 2006 05:44:19 +0000
+
+trac (0.9.5-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix debian/rules clean target so it doesn't break by trying to remove
+    files even when they don't exist. Closes: #366827.
+  * Updated build dependency for debhelper to be at leat 4.1.0, since that
+    is required for cdbs's debhelper.mk to work (according to linda, at
+    least).
+
+ -- Lars Wirzenius <liw@iki.fi>  Sun, 21 May 2006 07:41:47 +0300
+
+trac (0.9.5-1) unstable; urgency=high
+
+  * New upstream release.
+  * Security upload, hence urgency set to HIGH.
+    - Fixed wiki macro XSS vulnerability.
+    - Smaller memory usage when accessing subversion history.
+    - Fixed issue with incorrectly generated urls when installed behind a web
+      proxy.
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Tue, 18 Apr 2006 20:04:25 +0000
+
+trac (0.9.4-3) unstable; urgency=low
+
+  * Set a proper python-subversion dependency (Closes: #356797)
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Tue, 28 Mar 2006 18:49:06 +0000
+
+trac (0.9.4-2) unstable; urgency=low
+
+  * Revert db_default.py move. (Reopen: #332657)
+
+ -- Otavio Salvador <otavio@debian.org>  Thu, 16 Feb 2006 10:45:24 -0200
+
+trac (0.9.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * Revert back compatibility level to 4 allowing easier backporting to
+    Sarge.
+  * Move db_default.py to /etc/trac allowing better user customizability
+    (Closes: #332657).
+
+ -- Otavio Salvador <otavio@debian.org>  Thu, 16 Feb 2006 10:12:23 -0200
+
+trac (0.9.3-1) unstable; urgency=high
+
+  * New upstream release.
+  * Security update (thus urgengy high), fixing:
+    - Fixed XSS vulnerabilities.
+  * Also, fixes:
+    - Timeline RSS feed validity issue resolved.
+    - "trac-admin initenv" now handles empty repositories.
+    - Textile unicode support.
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Sun,  8 Jan 2006 20:24:43 +0000
+
+trac (0.9.2-1) unstable; urgency=high
+
+  * New upstream release.
+  * Security update (urgency high), fixing:
+    - an SQL injection vulnerability in the search module.
+    - broken email ticket notifications.
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Mon,  5 Dec 2005 19:36:02 +0000
+
+trac (0.9.1-2) unstable; urgency=low
+
+  * The new version solves upgrade problems from experimental
+    (Closes: #338122)
+  * Tras was relicensed as with a modified BSD license. Change "copyright"
+    accordingly.
+  * Added ${python:Depends} to handle dependencies.
+  * Compat updated to 5.
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Thu,  1 Dec 2005 21:46:10 +0000
+
+trac (0.9.1-1) unstable; urgency=HIGH
+
+  * New upstream release
+    - Fix a SQL injection security bug.
+
+ -- Otavio Salvador <otavio@debian.org>  Thu,  1 Dec 2005 20:02:37 -0200
+
+trac (0.9-1) unstable; urgency=low
+
+  * New upstream release
+    - 10_stolen_from_0.8-branch.patch: not need anymore.
+    - 11_fix_misleading_error.patch: not need anymore.
+    - Fix leak of temporary files; (Closes: #327803)
+    - Apache configuration snip was improved; (Closes: #327206)
+  * debian/control:
+    - Add recommends of python2.3-setuptools to support plugins;
+    - Add python2.3-pysqlite2 and python2.3-psycopg as alternatives to
+      python2.3-sqlite;
+    - Add suggests of libapache2-mod-python;
+    - Add depends of python2.3 package to leave lintain happy.
+  * debian/README.Debian: cite the need of a ready to use Subversion
+    repository to setup Trac environment. (Closes: #327205)
+
+ -- Otavio Salvador <otavio@debian.org>  Mon, 31 Oct 2005 18:02:30 -0200
+
+trac (0.8.4-2) unstable; urgency=low
+
+  * Add 10_stolen_from_0.8-branch.patch sync with r2041.
+  * Add 11_fix_misleading_error.patch. (Closes: #320926)
+  * Bumb Standards-Version to 3.6.2.
+
+ -- Otavio Salvador <otavio@debian.org>  Tue,  2 Aug 2005 07:18:11 -0300
+
+trac (0.8.4-1) unstable; urgency=critical
+
+  * New upstream release.
+    - Fixed file upload vulnerability. Trac could be tricked into uploading
+      files outside the environment directory.
+
+ -- Otavio Salvador <otavio@debian.org>  Sun, 19 Jun 2005 16:06:42 -0300
+
+trac (0.8.3-1) unstable; urgency=low
+
+  * New upstream release:
+    - 01_sync_from_0.8-branch.diff droped since all patches was included
+      on this release.
+    - Support Subversion 1.2 was add (Closes: #314200)
+
+ -- Otavio Salvador <otavio@debian.org>  Wed, 15 Jun 2005 19:57:06 -0300
+
+trac (0.8.1-3) unstable; urgency=low
+
+  * debian/patches/01_sync_from_0.8-branch.diff:
+    - Sync with r1520. This have all previous fixes and more.
+
+ -- Otavio Salvador <otavio@debian.org>  Sun, 17 Apr 2005 19:09:59 -0300
+
+trac (0.8.1-2) unstable; urgency=low
+
+  * debian/rules:
+    - Add support for patching in build process;
+    - Include contrib/ on doc directory. (Closes: #298969)
+  * debian/patches/01_sync_from_0.8-branch.diff:
+    - Added in sync with r1461. This include the fix for AssertionError
+      raised when visiting WikiRestructuredTextLinks after clean install
+      bug. (Closes: #301151)
+
+ -- Otavio Salvador <otavio@debian.org>  Tue, 29 Mar 2005 20:44:07 -0300
+
+trac (0.8.1-1) unstable; urgency=low
+
+  * debian/control:
+    - Add suggestion of enscript and python-docutils (Closes: #284094)
+    - Change debhelper build-dependencie to build-depends-indep and set it
+      to be (>= 4.0.0)
+    - Recommends a http server instead of depends of it (Closes: #294674)
+  * New upstream release (Closes: #298011)
+
+ -- Otavio Salvador <otavio@debian.org>  Sat,  5 Mar 2005 17:29:21 -0300
+
+trac (0.8-1) unstable; urgency=low
+
+  * New upstream release (Closes: #282010)
+
+ -- Otavio Salvador <otavio@debian.org>  Mon, 20 Dec 2004 22:49:48 -0200
+
+trac (0.7.1-4) unstable; urgency=low
+
+  * debian/control
+    - changed the order httpd<>apache2
+    - added python as build-dependency (Closes: #270180)
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Mon,  6 Sep 2004 09:06:28 +0000
+
+trac (0.7.1-3) unstable; urgency=low
+
+  * debian/control: Depends: changed to include virtual httpd (Closes: #267890)
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Sat, 28 Aug 2004 17:48:55 +0300
+
+trac (0.7.1-2) unstable; urgency=low
+
+  * debian/control:
+    - Fixed typo (Closes: #266868)
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Thu, 19 Aug 2004 17:03:39 +0000
+
+trac (0.7.1-1) unstable; urgency=low
+
+  * First package upload.
+  * Man pages taken from trunk.
+
+ -- Jesus Climent <jesus.climent@hispalinux.es>  Mon, 19 Jul 2004 12:01:17 +0000

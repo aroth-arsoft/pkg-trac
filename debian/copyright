@@ -1,0 +1,101 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Trac
+Source: http://trac.edgewall.org/
+Upstream-Contact: Edgewall Software <trac-dev@googlegroups.com>
+Comment: upstream source ships with minified versions of several
+ javascript libraries, all of which have distinct copyright holders
+ and their own free licensing terms and are not shipped in the debian
+ trac binary package.  Please see those packages for copyright and
+ licensing details: libjs-excanvas, libjs-jquery, libjs-jquery-ui,
+ libjs-jquery-timepicker
+
+Files: *
+Copyright: 2003-2013 Edgewall Software <trac-dev@googlegroups.com>,
+           Daniel Lundin <daniel@edgewall.com>,
+           Jonas Borgström <jonas@edgewall.com>,
+           Alec Thomas <alec@swapoff.org>,
+           Christian Boos <cboos@edgewall.org>,
+           Christopher Lenz <cmlenz@gmx.de>,
+           Jeff Weiss <trac@jeffweiss.org>,
+           Andres Salomon <dilinger@athenacr.com>,
+           Matthew Good <trac@matt-good.net>,
+           Emmanuel Blot <emmanuel.blot@free.fr>,
+           Brian Meeker,
+           Oliver Rutherfurd,
+           Noah Kantrowitz <noah@coderanger.net>,
+           Allan Saddi <allan@saddi.com>,
+           Francois Harvey <fharvey@securiweb.net>,
+           Stephen Hansen,
+           Herbert Valerio Riedel <hvr@gnu.org>
+License: BSD
+
+Files: sample-plugins/workflow/MilestoneOperation.py
+Copyright: 2012 Franz Mayer <franz.mayer@gefasoft.de>
+License: BEER-WARE
+
+Files: contrib/sourceforge2trac.py
+Copyright: Mark Rowe <mrowe@bluewire.net.nz>,
+           anatoly techtonik <techtonik@php.net>,
+           Christian Boos <cboos@edgewall.org>
+License: BSD
+
+Files: contrib/bugzilla2trac.py
+Copyright: Dmitry Yusupov <dmitry_yus@yahoo.com>
+           Bill Soudan <bill@soudan.net>
+           Florent Guillaume <fg@nuxeo.com>
+           Jeroen Ruigrok van der Werven <asmodai@in-nomine.org>
+           Jeff Moreland <hou5e@hotmail.com>
+License: BSD
+
+Files: debian/*
+Copyright: anatoly techtonik <techtonik@gmail.com>,
+           Andres Salomon <dilinger@debian.org>,
+           Arthur de Jong <adejong@debian.org>,
+           Daniel Kahn Gillmor <dkg@fifthhorseman.net>,
+           Giuseppe Iuculano <giuseppe@iuculano.it>,
+           Jakub Wilk <jwilk@debian.org>,
+           Jesus Climent <jesus.climent@hispalinux.es>,
+           Lars Wirzenius <liw@iki.fi>,
+           Luis Matos <gass@otiliamatos.ath.cx>,
+           Otavio Salvador <otavio@debian.org>,
+           Piotr Ożarowski <piotr@debian.org>,
+           W. Martin Borgert <debacle@debian.org>
+License: BSD
+
+Files: debian/patches/50_sqlitetopg_script.patch
+Copyright: 2008 John Hampton <pacopablo@pacopablo.com>
+License: BSD
+
+License: BSD
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+ 3. The name of the author may not be used to endorse or promote
+    products derived from this software without specific prior
+    written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS
+ OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+ DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+ GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+ IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+ OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BEER-WARE
+ "THE BEER-WARE LICENSE" (Revision 42):
+ <franz.mayer@gefasoft.de> wrote this file.  As long as you retain this
+ notice you can do whatever you want with this stuff. If we meet some day,
+ and you think this stuff is worth it, you can buy me a beer in return.
+ Franz Mayer

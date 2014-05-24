@@ -1,0 +1,4 @@
+20_add_interpreter_line.patch
+50_sqlitetopg_script.patch
+60_do_not_ship_jquery_ui_images.patch
+babel-fixes.patch

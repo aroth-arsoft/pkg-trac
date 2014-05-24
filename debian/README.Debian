@@ -1,0 +1,198 @@
+Configuring Trac on Debian
+==========================
+
+  Trac is a web-based project management tool. It can be run as a
+standalone daemon (tracd) or together with a web server, such as
+Apache.
+  The web server needs to support either WSGI (Apache with
+libapache2-mod-wsgi), FCGI (Apache, lighttpd), or CGI (most web
+servers).
+  Trac is written in the Python programming language and uses Genshi
+(python-genshi) as templating system and, optionally, Pygments
+(python-pygments) for source code syntax highlighting.
+  Trac uses either PostgreSQL, MySQL, or SQLite as database.
+
+Creating a Project Environment
+------------------------------
+
+  Trac Environment is the backend storage that contains information
+related to specific project like settings, wiki pages, tickets,
+templates, etc.
+  A Trac environment consists of a directory with human-readable
+configuration file, default SQLite database, log files, attachments,
+plugins (if any) and custom templates.
+
+  Trac can visualize contents of many Version Control Systems (vcs)
+repositories. By default it supports Subversion or Git. Plugins can be
+added to support bzr (trac-bzr) or Mercurial (trac-mercurial).
+
+  Trac can work without vcs repository, but you may want to create
+one for you project before creating a Trac environment. With
+Subversion this can be made with:
+
+    $ mkdir /path/to/repos
+    $ svnadmin create /path/to/repos
+
+A new Trac environment is created with trac-admin:
+
+    $ trac-admin /path/to/projectenv initenv
+
+NOTE: The web server user (usually "www-data" for Apache) needs write
+permission to the environment directory and all the files inside.
+After creating the environment you would need to execute
+"chown -R www-data /path/to/projectenv" if trac-admin was executed as
+a different user than "www-data".
+
+trac-admin will ask you some questions to setup the environment
+(defaults should be ok). For using PostgreSQL, you need to enter
+the database string as postgres://USER:PASSWORD@localhost/PROJECT
+(see below).
+
+Configuring PostgreSQL
+======================
+
+PostgreSQL is probably the best option for Trac. The steps are
+basically:
+
+# apt-get install python-psycopg2 postgresql
+# su - postgres -c 'createuser -U postgres -S -D -R -E -P USER'
+# su - postgres -c 'createdb -U postgres -O USER -E UTF8 PROJECT'
+(replace USER and PROJECT with something useful)
+
+Configuring Apache Web Server
+=============================
+
+Apache is the most used webserver, so it's preferred for Trac.
+It can be configured to be run as CGI application (CGI, WSGI, FCGI)
+or with mod-python. WSGI is the recommended method.
+
+Configuring as CGI, WSGI, FastCGI
+---------------------------------
+
+For trac >= 0.11 the *gi scripts have to be generated using the deploy command:
+
+	trac-admin /path/to/env deploy /path/to/www/trac
+
+This will generate scripts in the /path/to/www/trac/cgi-bin directory with
+substituted Trac environment paths.
+
+To use trac as an executable script in Apache, just add the according entry:
+
+#Trac as CGI on Apache (sluggish, not recommended)
+#extra info in https://coderanger.net/~coderanger/tracdoc/install/cgi.html
+#even more info at http://trac.edgewall.org/wiki/TracCgi
+ScriptAlias /trac /path/to/www/trac/cgi-bin/trac.cgi
+
+#Trac as FastCGI on Apache
+#extra info in https://coderanger.net/~coderanger/tracdoc/install/fastcgi.html
+ScriptAlias /trac /path/to/www/trac/cgi-bin/trac.fcgi/
+
+#Trac as WSGI on Apache
+#extra info on http://trac.edgewall.org/wiki/TracModWSGI
+#info about daemon mode http://code.google.com/p/modwsgi/
+# http://code.google.com/p/modwsgi/wiki/IntegrationWithTrac
+WSGIScriptAlias /trac /path/to/www/trac/cgi-bin/trac.wsgi
+
+
+Configuring to use Apache with ModPython
+----------------------------------------
+
+For Modpython just use the following:
+
+#Extra info https://coderanger.net/~coderanger/tracdoc/install/mod_python.html
+# Trac need to know where the database is located
+<Location /trac>
+  SetHandler mod_python
+  PythonHandler trac.web.modpython_frontend
+  PythonInterpreter main
+  PythonOption TracEnv /path/to/env
+  PythonOption TracUriRoot /trac
+  SetEnv PYTHON_EGG_CACHE /tmp
+</Location>
+
+
+Authentication using Apache
+------------------------------
+
+# You need this to allow users to authenticate
+# trac.htpasswd can be created with
+# cmd 'htpasswd -c trac.htpasswd' (UNIX)
+# do 'man htpasswd' to see all the options
+<Location "/trac/login">
+        AuthType Basic
+        AuthName "trac"
+        AuthUserFile /somewhere/trac.htpasswd
+        Require valid-user
+</location>
+
+
+Using Trac
+----------
+
+You should now have a working Trac installation at:
+
+http://<yourhostname>/trac
+
+There you should be able to browse your subversion repository, create tickets,
+view the timeline etc. Keep in mind that anonymous users (not logged in) can
+only access a restricted subset of all Trac features.
+
+Please read TracPermissions (in the wiki) to learn how to grant additional
+privileges to authenticated users.
+
+For further user-documentation, see TracGuide and check coderanger's website [1].
+[1] https://coderanger.net/~coderanger/tracdoc/
+
+
+Notes for users upgrading Trac
+==============================
+
+Information on how to upgrade Trac can be found in the Trac wiki:
+http://trac.edgewall.org/wiki/TracUpgrade
+
+Running Trac via WSGI etc.
+--------------------------
+
+If you upgrade Trac and do not use the builtin HTTP daemon (tracd),
+you must restart your HTTPD manually. E.g. for Apache:
+
+# /etc/init.d/apache restart
+
+Upgrading from Trac 0.10.x to 0.11.x: SQLite
+--------------------------------------------
+
+Wookey at toby-churchill.com came across the issue, that the
+SQLite format between Trac 0.10.x (SQLite v2) and 0.11.x (SQLite
+v3) has changed. If you happen to use SQLite, use the following
+update routine by Wookey:
+$ sqlite db/trac.db .dump | sqlite3 db/trac.db3
+With the new file you should be able to run Trac as expected.
+See http://bugs.debian.org/501338 for details.
+
+
+Debian specifics
+================
+
+We added some patches and files, that are useful to most users:
+
+1. A sample script to migrate an SQLite Trac database to PostgreSQL.
+   See http://trac-hacks.org/wiki/SqliteToPgScript (this should
+   probably go away and be replaced by trac-migrate, see TODO.Debian)
+
+2. we rely on javascript from the relevant libjs-* packages in debian,
+   rather than shipping the bundled versions provided by upstream.
+
+Enjoy!
+
+/The Trac Team
+
+Please also consider joining mailing lists at
+<http://trac.edgewall.org/wiki/MailingList>
+
+Visit the Trac open source project at <http://trac.edgewall.com/>
+
+Jonas Borgstrom <jonas@edgewall.com>, Sat, 22 May 2004 20:49:22 +0200
+Luis Matos <gass@otiliamatos.ath.cx>, Mon, 21 Jul 2008 21:06:36 +0100
+W. Martin Borgert <debacle@debian.org>, Sat, 2009-10-10, 11:39 +0000
+
+ -- Daniel Kahn Gillmor <dkg@fifthhorseman.net>, Thu,  9 May 2013 17:05:29 -0400

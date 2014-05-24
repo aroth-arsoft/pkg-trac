@@ -1,0 +1,3 @@
+trac/htdocs/js/messages/*.js
+trac/locale/*/LC_MESSAGES/messages*.mo
+trac/locale/*/LC_MESSAGES/tracini*.mo

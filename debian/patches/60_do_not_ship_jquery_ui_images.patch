@@ -1,0 +1,40 @@
+diff --git a/setup.py b/setup.py
+index 086b969..97bdb83 100755
+--- a/setup.py
++++ b/setup.py
+@@ -85,7 +85,7 @@ facilities.
+         'trac': ['htdocs/*.*', 'htdocs/README', 'htdocs/js/*.*',
+                  'htdocs/js/messages/*.*', 'htdocs/css/*.*',
+                  'htdocs/css/jquery-ui/*.*',
+-                 'htdocs/css/jquery-ui/images/*.*',
++                 'htdocs/css/jquery-ui/images',
+                  'htdocs/guide/*', 'locale/*/LC_MESSAGES/messages.mo',
+                  'locale/*/LC_MESSAGES/tracini.mo'],
+         'trac.wiki': ['default-pages/*'],
+diff --git a/Trac.egg-info/SOURCES.txt b/Trac.egg-info/SOURCES.txt
+index 3959405..283b079 100644
+--- a/Trac.egg-info/SOURCES.txt
++++ b/Trac.egg-info/SOURCES.txt
+@@ -214,22 +214,6 @@ trac/htdocs/css/timeline.css
+ trac/htdocs/css/trac.css
+ trac/htdocs/css/wiki.css
+ trac/htdocs/css/jquery-ui/jquery-ui.css
+-trac/htdocs/css/jquery-ui/images/ui-bg_diagonals-thick_18_ffddcc_40x40.png
+-trac/htdocs/css/jquery-ui/images/ui-bg_diagonals-thick_20_666666_40x40.png
+-trac/htdocs/css/jquery-ui/images/ui-bg_flat_00_ffffff_40x100.png
+-trac/htdocs/css/jquery-ui/images/ui-bg_flat_0_ffffdd_40x100.png
+-trac/htdocs/css/jquery-ui/images/ui-bg_flat_0_ffffff_40x100.png
+-trac/htdocs/css/jquery-ui/images/ui-bg_flat_10_000000_40x100.png
+-trac/htdocs/css/jquery-ui/images/ui-bg_highlight-soft_30_303030_1x100.png
+-trac/htdocs/css/jquery-ui/images/ui-bg_highlight-soft_75_c0f0c0_1x100.png
+-trac/htdocs/css/jquery-ui/images/ui-bg_highlight-soft_80_ffffdd_1x100.png
+-trac/htdocs/css/jquery-ui/images/ui-icons_222222_256x240.png
+-trac/htdocs/css/jquery-ui/images/ui-icons_4b954f_256x240.png
+-trac/htdocs/css/jquery-ui/images/ui-icons_505050_256x240.png
+-trac/htdocs/css/jquery-ui/images/ui-icons_707070_256x240.png
+-trac/htdocs/css/jquery-ui/images/ui-icons_9b081d_256x240.png
+-trac/htdocs/css/jquery-ui/images/ui-icons_b00000_256x240.png
+-trac/htdocs/css/jquery-ui/images/ui-icons_d7d7d7_256x240.png
+ trac/htdocs/guide/admin-permissions-TICKET_ADMIN.png
+ trac/htdocs/guide/admin-permissions.png
+ trac/htdocs/guide/admin.png
