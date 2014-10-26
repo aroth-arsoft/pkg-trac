@@ -1,0 +1,7 @@
+# upstream includes these minified .js files, but rather we do not
+# ship them in debian.  rather, we link to the corresponding files
+# from the appropriate debian packages.
+trac: source-is-missing trac/htdocs/js/excanvas.js
+trac: source-is-missing trac/htdocs/js/jquery-ui-addons.js
+trac: source-is-missing trac/htdocs/js/jquery-ui.js
+trac: source-is-missing trac/htdocs/js/jquery.js
