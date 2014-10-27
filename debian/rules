@@ -5,10 +5,6 @@ RESTORE_JQUERY_UI_IMAGES = rm -f trac/htdocs/css/jquery-ui/images; mv debian/ima
 %:
 	dh $@ --with python2 --buildsystem=python_distutils
 
-override_dh_clean:
-	dh_clean -O--buildsystem=python_distutils
-	[ -d Trac.egg-info ] && rm -rf Trac.egg-info || true
-
 override_dh_compress:
 	dh_compress -X.py -X-hook
 
