@@ -27,7 +27,7 @@ Copyright: 2003-2013 Edgewall Software <trac-dev@googlegroups.com>,
            Francois Harvey <fharvey@securiweb.net>,
            Stephen Hansen,
            Herbert Valerio Riedel <hvr@gnu.org>
-License: BSD
+License: BSD-3-clause
 
 Files: sample-plugins/workflow/MilestoneOperation.py
 Copyright: 2012 Franz Mayer <franz.mayer@gefasoft.de>
@@ -37,7 +37,7 @@ Files: contrib/sourceforge2trac.py
 Copyright: Mark Rowe <mrowe@bluewire.net.nz>,
            anatoly techtonik <techtonik@php.net>,
            Christian Boos <cboos@edgewall.org>
-License: BSD
+License: BSD-3-clause
 
 Files: contrib/bugzilla2trac.py
 Copyright: Dmitry Yusupov <dmitry_yus@yahoo.com>
@@ -45,7 +45,7 @@ Copyright: Dmitry Yusupov <dmitry_yus@yahoo.com>
            Florent Guillaume <fg@nuxeo.com>
            Jeroen Ruigrok van der Werven <asmodai@in-nomine.org>
            Jeff Moreland <hou5e@hotmail.com>
-License: BSD
+License: BSD-3-clause
 
 Files: debian/*
 Copyright: anatoly techtonik <techtonik@gmail.com>,
@@ -60,13 +60,13 @@ Copyright: anatoly techtonik <techtonik@gmail.com>,
            Otavio Salvador <otavio@debian.org>,
            Piotr Ożarowski <piotr@debian.org>,
            W. Martin Borgert <debacle@debian.org>
-License: BSD
+License: BSD-3-clause
 
 Files: debian/patches/50_sqlitetopg_script.patch
 Copyright: 2008 John Hampton <pacopablo@pacopablo.com>
-License: BSD
+License: BSD-3-clause
 
-License: BSD
+License: BSD-3-clause
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions
  are met:

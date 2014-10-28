@@ -1,8 +1,15 @@
-trac (1.0.2-0.1~aroth~ppa1) trusty; urgency=medium
+trac (1.0.2-1.1~aroth~ppa1) trusty; urgency=medium
 
-  * new upstream version
+  * bring latest version to ubuntu
 
  -- Andreas Roth <aroth@arsoft-online.com>  Sun, 26 Oct 2014 09:55:40 +0100
+
+trac (1.0.2-1) unstable; urgency=low
+
+  * new upstream (Closes: #766681).
+  * bump Standards-Version to 3.9.6 (no changes needed)
+
+ -- W. Martin Borgert <debacle@debian.org>  Fri, 24 Oct 2014 23:10:51 +0000
 
 trac (1.0.1-3) unstable; urgency=medium
 
