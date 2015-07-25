@@ -1,0 +1,5 @@
+/trac/
+*.debhelper
+*.substvars
+*.log
+/files
