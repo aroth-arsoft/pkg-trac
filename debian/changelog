@@ -1,8 +1,42 @@
+trac (1.0.8+dfsg-1.1~aroth~ppa1) wily; urgency=medium
+
+  * pick up latest ubuntu/debian version
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Mon, 21 Sep 2015 07:12:33 +0200
+
+trac (1.0.8+dfsg-1) unstable; urgency=low
+
+  * new upstream (Closes: #786467)
+  * removed syntax highlighting patch
+  * add build-dep on dh-python
+
+ -- W. Martin Borgert <debacle@debian.org>  Wed, 12 Aug 2015 00:42:18 +0000
+
 trac (1.0.8-0.1~aroth~ppa1) vivid; urgency=medium
 
   * use latest version 1.0.8
 
  -- Andreas Roth <aroth@arsoft-online.com>  Sat, 25 Jul 2015 14:57:43 +0200
+
+trac (1.0.2+dfsg-2) unstable; urgency=medium
+
+  * apply upstream patch to fix syntax highlighting (Closes: #771799)
+
+ -- W. Martin Borgert <debacle@debian.org>  Wed, 03 Dec 2014 12:00:13 +0000
+
+trac (1.0.2+dfsg-1) unstable; urgency=medium
+
+  [gregor herrmann <gregoa@debian.org>  Tue, 25 Nov 2014 23:25:18 +0100]
+  * Fix "[trac] Some sources are not included in your package":
+    repack to drop minified javascript files from source package:
+    - debian/copyright:
+      + add Files-Excluded
+      + update Comment about them
+    - drop debian/source/lintian-overrides
+    - add dversionmangle to debian/watch
+    (Closes: #769833)
+
+ -- W. Martin Borgert <debacle@debian.org>  Tue, 25 Nov 2014 23:02:26 +0000
 
 trac (1.0.2-1.1~aroth~ppa1) trusty; urgency=medium
 

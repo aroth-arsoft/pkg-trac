@@ -2,12 +2,12 @@ Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Trac
 Source: http://trac.edgewall.org/
 Upstream-Contact: Edgewall Software <trac-dev@googlegroups.com>
+Files-Excluded: trac/htdocs/js/excanvas.js
+ trac/htdocs/js/jquery-ui-addons.js
+ trac/htdocs/js/jquery-ui.js
+ trac/htdocs/js/jquery.js
 Comment: upstream source ships with minified versions of several
- javascript libraries, all of which have distinct copyright holders
- and their own free licensing terms and are not shipped in the debian
- trac binary package.  Please see those packages for copyright and
- licensing details: libjs-excanvas, libjs-jquery, libjs-jquery-ui,
- libjs-jquery-timepicker
+ javascript libraries, which are removed from the Debian source package.
 
 Files: *
 Copyright: 2003-2013 Edgewall Software <trac-dev@googlegroups.com>,
