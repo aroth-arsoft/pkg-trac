@@ -1,3 +1,15 @@
+trac (1.0.11-0.1~aroth1) xenial; urgency=medium
+
+  * new upstream version 1.0.11
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Thu, 02 Jun 2016 07:28:07 +0200
+
+trac (1.0.9+dfsg-1) unstable; urgency=low
+
+  * new upstream (Closes: #806135)
+
+ -- W. Martin Borgert <debacle@debian.org>  Sat, 12 Dec 2015 01:49:46 +0000
+
 trac (1.0.8+dfsg-1.1~aroth~ppa1) wily; urgency=medium
 
   * pick up latest ubuntu/debian version

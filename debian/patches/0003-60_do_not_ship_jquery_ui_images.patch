@@ -1,21 +1,18 @@
-diff --git a/setup.py b/setup.py
-index 086b969..97bdb83 100755
---- a/setup.py
-+++ b/setup.py
-@@ -85,7 +85,7 @@ facilities.
-         'trac': ['htdocs/*.*', 'htdocs/README', 'htdocs/js/*.*',
-                  'htdocs/js/messages/*.*', 'htdocs/css/*.*',
-                  'htdocs/css/jquery-ui/*.*',
--                 'htdocs/css/jquery-ui/images/*.*',
-+                 'htdocs/css/jquery-ui/images',
-                  'htdocs/guide/*', 'locale/*/LC_MESSAGES/messages.mo',
-                  'locale/*/LC_MESSAGES/tracini.mo'],
-         'trac.wiki': ['default-pages/*'],
+From 9e28d9d922c67854d02aa1b9faf2924094784482 Mon Sep 17 00:00:00 2001
+From: "W. Martin Borgert" <debacle@debian.org>
+Date: Fri, 11 Dec 2015 00:27:17 +0100
+Subject: 60_do_not_ship_jquery_ui_images
+
+---
+ Trac.egg-info/SOURCES.txt | 16 ----------------
+ setup.py                  |  2 +-
+ 2 files changed, 1 insertion(+), 17 deletions(-)
+
 diff --git a/Trac.egg-info/SOURCES.txt b/Trac.egg-info/SOURCES.txt
-index 3959405..283b079 100644
+index 3c4dd50..6bc460d 100644
 --- a/Trac.egg-info/SOURCES.txt
 +++ b/Trac.egg-info/SOURCES.txt
-@@ -214,22 +214,6 @@ trac/htdocs/css/timeline.css
+@@ -215,22 +215,6 @@ trac/htdocs/css/timeline.css
  trac/htdocs/css/trac.css
  trac/htdocs/css/wiki.css
  trac/htdocs/css/jquery-ui/jquery-ui.css
@@ -38,3 +35,16 @@ index 3959405..283b079 100644
  trac/htdocs/guide/admin-permissions-TICKET_ADMIN.png
  trac/htdocs/guide/admin-permissions.png
  trac/htdocs/guide/admin.png
+diff --git a/setup.py b/setup.py
+index c89e384..92bacc6 100755
+--- a/setup.py
++++ b/setup.py
+@@ -85,7 +85,7 @@ facilities.
+         'trac': ['htdocs/*.*', 'htdocs/README', 'htdocs/js/*.*',
+                  'htdocs/js/messages/*.*', 'htdocs/css/*.*',
+                  'htdocs/css/jquery-ui/*.*',
+-                 'htdocs/css/jquery-ui/images/*.*',
++                 'htdocs/css/jquery-ui/images',
+                  'htdocs/guide/*', 'locale/*/LC_MESSAGES/messages.mo',
+                  'locale/*/LC_MESSAGES/tracini.mo'],
+         'trac.wiki': ['default-pages/*'],

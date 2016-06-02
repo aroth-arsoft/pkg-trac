@@ -1,0 +1,6 @@
+The following files were removed from the source archive,
+because they are minified, non-source files:
+
+trac/htdocs/js/excanvas.js
+trac/htdocs/js/jquery.js
+trac/htdocs/js/jquery-ui.js

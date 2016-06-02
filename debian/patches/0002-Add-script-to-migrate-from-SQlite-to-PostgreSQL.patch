@@ -1,6 +1,16 @@
-Author: <debacle@debian.org>
-Description: Add script to migrate from SQlite to PostgreSQL.
+From 71901ecabd43287769ae77b7d56995d3d539ef4a Mon Sep 17 00:00:00 2001
+From: "debacle@debian.org" <debacle@debian.org>
+Date: Fri, 11 Dec 2015 00:27:00 +0100
+Subject: Add script to migrate from SQlite to PostgreSQL.
 
+---
+ contrib/sqlitetopgscript/sqlite2pg | 336 +++++++++++++++++++++++++++++++++++++
+ 1 file changed, 336 insertions(+)
+ create mode 100644 contrib/sqlitetopgscript/sqlite2pg
+
+diff --git a/contrib/sqlitetopgscript/sqlite2pg b/contrib/sqlitetopgscript/sqlite2pg
+new file mode 100644
+index 0000000..2f4f977
 --- /dev/null
 +++ b/contrib/sqlitetopgscript/sqlite2pg
 @@ -0,0 +1,336 @@
