@@ -1,3 +1,15 @@
+trac (1.0.12-0.2~aroth1) xenial; urgency=medium
+
+  * add missing SOURCES.txt
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Sun, 10 Jul 2016 09:02:48 +0200
+
+trac (1.0.12-0.1~aroth1) xenial; urgency=medium
+
+  * new upstream version 1.0.12
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Fri, 08 Jul 2016 06:41:23 +0200
+
 trac (1.0.11-0.1~aroth1) xenial; urgency=medium
 
   * new upstream version 1.0.11
