@@ -1,7 +1,7 @@
-/usr/share/javascript/jquery/jquery.min.js /usr/lib/python2.7/dist-packages/trac/htdocs/js/jquery.js
 /usr/share/javascript/excanvas/excanvas.min.js /usr/lib/python2.7/dist-packages/trac/htdocs/js/excanvas.js
-/usr/share/javascript/jquery-ui/jquery-ui.js /usr/lib/python2.7/dist-packages/trac/htdocs/js/jquery-ui.js
-/usr/share/javascript/jquery-timepicker/jquery-ui-timepicker-addon.js /usr/lib/python2.7/dist-packages/trac/htdocs/js/jquery-ui-addons.js
 /usr/share/javascript/jquery-timepicker/jquery-ui-timepicker-addon.css /usr/lib/python2.7/dist-packages/trac/htdocs/css/jquery-ui-addons.css
-/usr/share/javascript/jquery-ui/css/smoothness/jquery-ui.css /usr/lib/python2.7/dist-packages/trac/htdocs/css/jquery-ui/jquery-ui.css
-/usr/share/javascript/jquery-ui/css/smoothness/images /usr/lib/python2.7/dist-packages/trac/htdocs/css/jquery-ui/images
+/usr/share/javascript/jquery-timepicker/jquery-ui-timepicker-addon.js /usr/lib/python2.7/dist-packages/trac/htdocs/js/jquery-ui-addons.js
+/usr/share/javascript/jquery-ui/jquery-ui.js /usr/lib/python2.7/dist-packages/trac/htdocs/js/jquery-ui.js
+/usr/share/javascript/jquery-ui/themes/base/images /usr/lib/python2.7/dist-packages/trac/htdocs/css/jquery-ui/images
+/usr/share/javascript/jquery-ui/themes/base/jquery-ui.css /usr/lib/python2.7/dist-packages/trac/htdocs/css/jquery-ui/jquery-ui.css
+/usr/share/javascript/jquery/jquery.min.js /usr/lib/python2.7/dist-packages/trac/htdocs/js/jquery.js

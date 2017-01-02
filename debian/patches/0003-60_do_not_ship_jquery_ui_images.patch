@@ -1,4 +1,4 @@
-From 9e28d9d922c67854d02aa1b9faf2924094784482 Mon Sep 17 00:00:00 2001
+From a4641fca49e86bd084adadb644270de20737c5f3 Mon Sep 17 00:00:00 2001
 From: "W. Martin Borgert" <debacle@debian.org>
 Date: Fri, 11 Dec 2015 00:27:17 +0100
 Subject: 60_do_not_ship_jquery_ui_images
@@ -9,10 +9,10 @@ Subject: 60_do_not_ship_jquery_ui_images
  2 files changed, 1 insertion(+), 17 deletions(-)
 
 diff --git a/Trac.egg-info/SOURCES.txt b/Trac.egg-info/SOURCES.txt
-index 3c4dd50..6bc460d 100644
+index 6557ed9..cfae159 100644
 --- a/Trac.egg-info/SOURCES.txt
 +++ b/Trac.egg-info/SOURCES.txt
-@@ -215,22 +215,6 @@ trac/htdocs/css/timeline.css
+@@ -217,22 +217,6 @@ trac/htdocs/css/timeline.css
  trac/htdocs/css/trac.css
  trac/htdocs/css/wiki.css
  trac/htdocs/css/jquery-ui/jquery-ui.css
@@ -36,7 +36,7 @@ index 3c4dd50..6bc460d 100644
  trac/htdocs/guide/admin-permissions.png
  trac/htdocs/guide/admin.png
 diff --git a/setup.py b/setup.py
-index c89e384..92bacc6 100755
+index 75b3cc4..616567f 100755
 --- a/setup.py
 +++ b/setup.py
 @@ -85,7 +85,7 @@ facilities.

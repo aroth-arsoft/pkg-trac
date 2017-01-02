@@ -4,3 +4,4 @@ because they are minified, non-source files:
 trac/htdocs/js/excanvas.js
 trac/htdocs/js/jquery.js
 trac/htdocs/js/jquery-ui.js
+trac/htdocs/js/jquery-ui-addons.js

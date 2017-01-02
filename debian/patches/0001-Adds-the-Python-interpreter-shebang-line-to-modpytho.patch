@@ -1,4 +1,4 @@
-From bde057db76e047668e1306e5c082ba2958b0f03e Mon Sep 17 00:00:00 2001
+From 6bddf45246be4ed1b5dfb230847c65ea37b21233 Mon Sep 17 00:00:00 2001
 From: "debacle@debian.org" <debacle@debian.org>
 Date: Fri, 11 Dec 2015 00:26:40 +0100
 Subject: Adds the Python interpreter shebang line to modpython_frontend.py.

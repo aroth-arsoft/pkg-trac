@@ -1,4 +1,4 @@
-From 71901ecabd43287769ae77b7d56995d3d539ef4a Mon Sep 17 00:00:00 2001
+From dd73a84c41230a4b8957a3a0c76066f2076de1a4 Mon Sep 17 00:00:00 2001
 From: "debacle@debian.org" <debacle@debian.org>
 Date: Fri, 11 Dec 2015 00:27:00 +0100
 Subject: Add script to migrate from SQlite to PostgreSQL.

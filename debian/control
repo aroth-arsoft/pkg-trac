@@ -10,7 +10,7 @@ Maintainer: Python Applications Packaging Team <python-apps-team@lists.alioth.de
 Uploaders: Otavio Salvador <otavio@debian.org>,
            W. Martin Borgert <debacle@debian.org>,
            Daniel Kahn Gillmor <dkg@fifthhorseman.net>
-Standards-Version: 3.9.7
+Standards-Version: 3.9.8
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/trac.git
 Vcs-Git: git://anonscm.debian.org/collab-maint/trac.git
 X-Python-Version: >= 2.5

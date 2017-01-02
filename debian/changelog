@@ -1,3 +1,35 @@
+trac (1.2+dfsg-1.1~aroth1) yakkety; urgency=medium
+
+  * backport latest version
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Mon, 02 Jan 2017 09:08:39 +0100
+
+trac (1.2+dfsg-1) unstable; urgency=medium
+
+  * new upstream version
+  * fix links (Closes: #846650)
+  * simplify debian/rules, use pybuild
+
+ -- W. Martin Borgert <debacle@debian.org>  Sat, 03 Dec 2016 20:55:45 +0000
+
+trac (1.0.13+dfsg-1) unstable; urgency=low
+
+  [ Piotr Ożarowski ]
+  * Remove PAPT from Maintainer field to complete migration to collab-maint
+
+  [ W. Martin Borgert ]
+  * new upstream
+
+ -- W. Martin Borgert <debacle@debian.org>  Mon, 03 Oct 2016 22:52:31 +0000
+
+trac (1.0.12+dfsg-1) unstable; urgency=low
+ 
+  * new upstream
+  * watch only for stable (1.0.*) versions
+  * bump standards-version; no changes required.
+
+ -- W. Martin Borgert <debacle@debian.org>  Thu, 21 Jul 2016 22:30:29 +0000
+
 trac (1.0.12-0.2~aroth1) xenial; urgency=medium
 
   * add missing SOURCES.txt
