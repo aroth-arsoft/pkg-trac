@@ -1,4 +1,6 @@
 #!/usr/bin/make -f
+BACKUP_JQUERY_UI_IMAGES = mv trac/htdocs/css/jquery-ui/images debian/images.backup; touch trac/htdocs/css/jquery-ui/images
+RESTORE_JQUERY_UI_IMAGES = rm -f trac/htdocs/css/jquery-ui/images; mv debian/images.backup trac/htdocs/css/jquery-ui/images
 
 %:
 	dh $@ --with python2 --buildsystem=pybuild
@@ -6,3 +8,13 @@
 override_dh_fixperms:
 	cp *.egg-info/SOURCES.txt $(shell readlink -f debian/trac/usr/lib/python*/dist-packages/*.egg-info)/SOURCES.txt
 	dh_fixperms
+
+override_dh_auto_install:
+	$(BACKUP_JQUERY_UI_IMAGES)
+	dh_auto_install --buildsystem=pybuild
+	$(RESTORE_JQUERY_UI_IMAGES)
+
+override_dh_auto_build:
+	$(BACKUP_JQUERY_UI_IMAGES)
+	dh_auto_build --buildsystem=pybuild
+	$(RESTORE_JQUERY_UI_IMAGES)
