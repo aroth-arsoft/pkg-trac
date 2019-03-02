@@ -8,9 +8,6 @@ Subject: Add script to migrate from SQlite to PostgreSQL.
  1 file changed, 336 insertions(+)
  create mode 100644 contrib/sqlitetopgscript/sqlite2pg
 
-diff --git a/contrib/sqlitetopgscript/sqlite2pg b/contrib/sqlitetopgscript/sqlite2pg
-new file mode 100644
-index 0000000..2f4f977
 --- /dev/null
 +++ b/contrib/sqlitetopgscript/sqlite2pg
 @@ -0,0 +1,336 @@

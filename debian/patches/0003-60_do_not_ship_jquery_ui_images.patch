@@ -8,11 +8,9 @@ Subject: 60_do_not_ship_jquery_ui_images
  setup.py                  |  2 +-
  2 files changed, 1 insertion(+), 17 deletions(-)
 
-diff --git a/Trac.egg-info/SOURCES.txt b/Trac.egg-info/SOURCES.txt
-index 6557ed9..cfae159 100644
 --- a/Trac.egg-info/SOURCES.txt
 +++ b/Trac.egg-info/SOURCES.txt
-@@ -217,22 +217,6 @@ trac/htdocs/css/timeline.css
+@@ -276,22 +276,6 @@
  trac/htdocs/css/trac.css
  trac/htdocs/css/wiki.css
  trac/htdocs/css/jquery-ui/jquery-ui.css
@@ -35,11 +33,9 @@ index 6557ed9..cfae159 100644
  trac/htdocs/guide/admin-permissions-TICKET_ADMIN.png
  trac/htdocs/guide/admin-permissions.png
  trac/htdocs/guide/admin.png
-diff --git a/setup.py b/setup.py
-index 75b3cc4..616567f 100755
 --- a/setup.py
 +++ b/setup.py
-@@ -85,7 +85,7 @@ facilities.
+@@ -78,7 +78,7 @@
          'trac': ['htdocs/*.*', 'htdocs/README', 'htdocs/js/*.*',
                   'htdocs/js/messages/*.*', 'htdocs/css/*.*',
                   'htdocs/css/jquery-ui/*.*',
