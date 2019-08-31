@@ -10,7 +10,7 @@ Subject: 60_do_not_ship_jquery_ui_images
 
 --- a/Trac.egg-info/SOURCES.txt
 +++ b/Trac.egg-info/SOURCES.txt
-@@ -276,22 +276,6 @@
+@@ -278,22 +278,6 @@
  trac/htdocs/css/trac.css
  trac/htdocs/css/wiki.css
  trac/htdocs/css/jquery-ui/jquery-ui.css
